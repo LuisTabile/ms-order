@@ -8,10 +8,14 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 @EnableWebMvc
 public class CORSConfig implements WebMvcConfigurer {
+
+    private static final String ALLOWED_ORIGIN = "https://editor.swagger.io";
+    private static final String ALLOWED_METHODS = "GET, POST, PUT, PATCH, DELETE";
+
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("https://editor.swagger.io")
-                .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE");
+                .allowedOrigins(ALLOWED_ORIGIN)
+                .allowedMethods(ALLOWED_METHODS);
     }
 }
