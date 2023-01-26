@@ -16,11 +16,18 @@ public class OrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderId;
+
+    @Column(name = "cpf")
     private String cpf;
+
+    @Column(name = "amount")
     private long amount;
+
+    @OneToMany
+    @JoinColumn(name = "itemId")
     private List<ItemEntity> itemsList;
 
-    @JoinColumn(name = "address.id")
+    @JoinColumn(name = "addressId")
     @OneToOne
     private AddressEntity addressEntity;
 }

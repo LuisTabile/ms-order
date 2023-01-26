@@ -17,10 +17,20 @@ public class ItemEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long itemId;
+
+    @Column (name = "name")
     private String name;
+
+    @Column (name = "creationTime")
     private LocalDateTime creationTime;
+
+    @Column (name = "validationTime")
     private LocalDateTime validationTime;
+
+    @Column (name = "price")
     private double price;
+
+    @Column (name = "description")
     private String description;
 
 }
