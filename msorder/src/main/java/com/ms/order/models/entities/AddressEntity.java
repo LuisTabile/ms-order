@@ -1,40 +1,35 @@
 package com.ms.order.models.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Builder
-@Entity(name = "address")
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
 @Table(name = "address")
 public class AddressEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long addressId;
 
-    @Column(name = "street")
+    @Column
     private String street;
 
-    @Column(name = "number")
+    @Column
     private int number;
 
-    @Column(name = "district")
+    @Column
     private String district;
 
-    @Column(name = "city")
+    @Column
     private String city;
 
-    @Column(name = "state")
+    @Column
     private String state;
 
-    @Column(name = "cep")
+    @Column
     private String cep;
-
-
 }

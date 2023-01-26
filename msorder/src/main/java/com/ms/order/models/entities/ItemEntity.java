@@ -7,30 +7,28 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "item")
+@AllArgsConstructor
+@Entity
 @Table(name = "item")
 public class ItemEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long itemId;
 
-    @Column (name = "name")
+    @Column
     private String name;
 
-    @Column (name = "creationTime")
+    @Column
     private LocalDateTime creationTime;
 
-    @Column (name = "validationTime")
+    @Column
     private LocalDateTime validationTime;
 
-    @Column (name = "price")
+    @Column
     private double price;
 
-    @Column (name = "description")
+    @Column
     private String description;
-
 }
