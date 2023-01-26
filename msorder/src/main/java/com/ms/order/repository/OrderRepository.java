@@ -9,4 +9,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface OrderRepository extends JpaRepository<OrderEntity, Long> {
     Page<OrderEntity> findByCpf(String cpf, Pageable pageable);
+
+    Page<OrderEntity> findAll(Pageable pageable);
+
 }
+//The interface defines two methods that return a Page of OrderEntity:
+//findByCpf: it will take a cpf number as parameter and returns a Page of OrderEntity
+//findAll: it will take a Pageable object as parameter and returns a Page of OrderEntity
