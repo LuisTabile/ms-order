@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 @Data
 public class ItemResponseDTO {
-    private Long itemId;
+    private Long id;
     private String name;
     private LocalDateTime creationTime;
     private LocalDateTime validationTime;
