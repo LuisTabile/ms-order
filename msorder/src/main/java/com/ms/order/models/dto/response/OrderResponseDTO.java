@@ -7,7 +7,7 @@ import java.util.List;
 
 @Data
 public class OrderResponseDTO {
-    private Long orderId;
+    private Long id;
     private String cpf;
     private List<ItemResponseDTO> items;
     private double amount;
