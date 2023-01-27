@@ -1,6 +1,7 @@
 package com.ms.history.services;
 
 import com.ms.history.models.dtos.response.HistoryResponseDTO;
+import com.ms.history.models.entities.HistoryEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

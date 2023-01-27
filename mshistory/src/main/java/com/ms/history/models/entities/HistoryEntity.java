@@ -19,4 +19,8 @@ public class HistoryEntity {
     private Long orderId;
     private double orderPrice;
     private LocalDateTime orderDate;
+
+    public HistoryEntity(String s, LocalDateTime of) {
+    }
+
 }
