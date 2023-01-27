@@ -20,8 +20,7 @@ public class ItemServiceImpl implements ItemService {
 
 
     public ItemResponseDTO update(Long id, ItemRequestDTO requestDTO) {
-        ItemEntity itemToUpdate = itemRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Item with id " + id + " not found"));
+        ItemEntity itemToUpdate = findById(id);
 
         itemToUpdate.setName(requestDTO.getName());
         itemToUpdate.setPrice(requestDTO.getPrice());
@@ -35,14 +34,14 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public void create(List<ItemEntity> items) {
-        items.forEach(itemRepository::save);
+        itemRepository.saveAll(items);
     }
 
     public ItemEntity findById(Long id) {
-        return itemRepository.findById(id)
-                .orElseThrow(ItemNotFoundException::new);
+        return itemRepository.findById(id).orElseThrow(ItemNotFoundException::new);
     }
-    public List<ItemEntity> findAll(){
+
+    public List<ItemEntity> findAll() {
         return itemRepository.findAll();
     }
 }
