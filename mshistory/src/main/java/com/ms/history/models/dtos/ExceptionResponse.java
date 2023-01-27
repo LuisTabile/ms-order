@@ -1,4 +1,4 @@
-package com.ms.history.models.dtos;
+package com.ms.history.constants.models.dtos;
 
 import com.ms.history.constants.ErrorCode;
 import lombok.AllArgsConstructor;
