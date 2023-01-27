@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class AddressEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long addressId;
+    private Long id;
 
     @Column
     private String street;

@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 public class ItemEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long itemId;
+    private Long id;
 
     @Column
     private String name;
